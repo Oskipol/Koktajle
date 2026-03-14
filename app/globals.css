@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #390345;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #810392;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  background-color: black;
+  overflow: hidden;
+}
+input[type="text"] {
+  outline: none;
+}
+::placeholder {
+  color: white;
+}
+
+.skladniki::after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: white;
+}
+.skladniki:hover::after {
+  width: 100%;
+  transition: width 0.3s ease;
+}
+
+@theme {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  --animate-fadeIn: fadeIn 1s ease forwards 1.2s;
+  --animate-fadeIn2: fadeIn 1s ease forwards 2s;
+  --font-Roboto: "Roboto", sans-serif;
+  --font-Playfair: "Playfair Display", serif;
+}
