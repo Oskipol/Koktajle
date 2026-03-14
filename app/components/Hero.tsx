@@ -27,6 +27,7 @@ const Hero = () => {
             ? "All the drinks you love, saved in one place."
             : "Find recipes, ingredients and inspiration for your next drink."}
       </p>
+      <s></s>
     </div>
   );
 };
